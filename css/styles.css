@@ -111,7 +111,7 @@ main h2 {
 /*=================================================== INTRODUCTION ===================================================*/
 .intro {
     display: grid;
-    grid-template-columns: 1fr 400px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 3rem;
     align-items: center;
 }
@@ -137,7 +137,57 @@ main h2 {
     margin-bottom: 0.75rem;
 }
 /*=================================================== EXPERTS ===================================================*/
+.experts {
+    border-top: 1px solid var(--line);
+}
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.75rem;
+}
+.expert-card {
+    background-color: white;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+.expert-name {
+    height: auto;
+    display: grid; /* Left off changing this to grid to make the image and such work */
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-family: "Courier New", monospace;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.role {
+    font-weight: bold;
+}
+.expert-img {
+    object-fit: cover;
+    overflow: hidden;
+    height: 120px;
+}
+.expert-info {
+    padding: 1.5rem;
+    flex-grow: 1; /* Body fills remaining card height */
+    display: flex;
+    flex-direction: column;
+}
+.expert-info h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+.expert-info p {
+    color: var(--ink-soft);
+    margin-bottom: 1rem;
+}
+.quote {
 
+}
 /*=================================================== COMPARE (JS) ===================================================*/
 
 /*=================================================== REFLECT ===================================================*/
