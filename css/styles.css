@@ -153,15 +153,23 @@ main h2 {
     display: flex;
     flex-direction: column;
 }
+.expert-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
 .expert-name {
     height: auto;
-    display: grid; /* Left off changing this to grid to make the image and such work */
-    flex-wrap: wrap;
+    display: flex; /* Left off changing this to grid to make the image and such work */
+    flex-direction: column;
+    gap: 1rem;
     justify-content: center;
     align-items: center;
     font-family: "Courier New", monospace;
     font-size: 1.5rem;
     font-weight: 700;
+}
+.expert-img-con {
+    min-width: 50px;
 }
 .role {
     font-weight: bold;
@@ -186,7 +194,9 @@ main h2 {
     margin-bottom: 1rem;
 }
 .quote {
-
+    font-style: italic;
+    color: #9aba9a;
+    margin-bottom: 1rem;
 }
 /*=================================================== COMPARE (JS) ===================================================*/
 
@@ -197,53 +207,27 @@ main h2 {
 /*=================================================== SOURCES ===================================================*/
 
 /*=================================================== FOOTER ===================================================*/
-.site-footer {
-    background-color: var(--ink);
-    color: white;
-    padding: 3.5rem 1.5rem 1.5rem;
+.footer {
+    background-color: #345;
 }
-.footer-grid {
+.sources {
+    margin: 2rem 3rem;
+    padding: 1rem 3rem;
+}
+.source-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    max-width: var(--max-width);
-    margin: 0 auto;
-    gap: 2.5rem;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 3rem;
 }
-.footer-col h2 {
-    font-size: 1.2rem;
-    color: white;
-    padding-bottom: 0.5rem;
-    margin-bottom: 1rem;
-    border-bottom: 3px solid var(--gold);
-    display: inline-block;
-}
-.footer-col ul {
+.source-list li, a {
     list-style: none;
-}
-.footer-col li {
-    margin-bottom: 0.5rem;
-    font-size: 0.8rem;
-}
-.footer-col a {
-    color: white;
     text-decoration: none;
-    font-weight: bold;
+    color: white;
 }
-.footer-col a:hover {
-    color: var(--gold);
-    text-decoration: underline;
+.source-list a:hover {
+    color: gold;
 }
-.footer-bottom {
-    max-width: var(--max-width);
-    margin: 2.5rem auto 0;
-    padding-top: 1.25rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
-    font-size: 0.95rem;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 0.5rem;
+.footer p {
+    color: gold;
 }
 /*=================================================== MEDIA QUERY ===================================================*/
