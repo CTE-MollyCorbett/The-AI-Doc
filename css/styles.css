@@ -140,70 +140,109 @@ main h2 {
 .experts {
     border-top: 1px solid var(--line);
 }
-.card-grid {
+.card-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1.75rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 10px;
 }
-.expert-card {
-    background-color: white;
-    border: 1px solid var(--line);
-    border-radius: 10px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
+.card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
 }
-.expert-header {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
 }
-.expert-name {
-    height: auto;
-    display: flex; /* Left off changing this to grid to make the image and such work */
-    flex-direction: column;
-    gap: 1rem;
-    justify-content: center;
-    align-items: center;
-    font-family: "Courier New", monospace;
-    font-size: 1.5rem;
-    font-weight: 700;
-}
-.expert-img-con {
-    min-width: 50px;
-}
-.role {
-    font-weight: bold;
-}
-.expert-img {
+.card img {
+    width: 100%;
+    height: 250px;
     object-fit: cover;
-    overflow: hidden;
-    height: 120px;
+    border-radius: 8px 8px 0 0;
+    margin-bottom: 15px;
 }
-.expert-info {
-    padding: 1.5rem;
-    flex-grow: 1; /* Body fills remaining card height */
+.card h3 {
+    color: var(--branch);
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+.card p {
+    color: #616660;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    text-align: justify;
+}
+.card .price {
+    font-size: 1.5rem;
+    color: green;
+}
+.btn-box {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
 }
-.expert-info h3 {
-    font-size: 1.3rem;
-    margin-bottom: 0.5rem;
+.btn {
+    text-decoration: none;
+    background-color: darkgreen;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 102px;
 }
-.expert-info p {
-    color: var(--ink-soft);
-    margin-bottom: 1rem;
-}
-.quote {
-    font-style: italic;
-    color: #9aba9a;
-    margin-bottom: 1rem;
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    background-color:forestgreen;
 }
 /*=================================================== COMPARE (JS) ===================================================*/
 
 /*=================================================== REFLECT ===================================================*/
 
 /*=================================================== DISCUSS (JS)? ===================================================*/
-
+.form-container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555555
+}
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+    max-width: 100%;
+}
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #45a049;
+}
 /*=================================================== SOURCES ===================================================*/
 
 /*=================================================== FOOTER ===================================================*/
@@ -218,6 +257,12 @@ main h2 {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 3rem;
+}
+.source-expert {
+    margin-bottom: 0.5rem;
+    text-decoration: underline;
+    font-size: 1.5rem;
+    color: lightcyan;
 }
 .source-list li, a {
     list-style: none;
