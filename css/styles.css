@@ -11,7 +11,7 @@
     --head: "Space Grotesk", "Segoe UI", Arial, sans-serif; /* header text */
     --body: "Source Sans 3", "Segoe UI", Arial, sans-serif; /* body text */
 
-    --max-width: 1100px;
+    --max-width: 1200px;
     --header-height: 70px;
 }
 /*=================================================== RESET & BASE ===================================================*/
@@ -206,12 +206,13 @@ main h2 {
 
 /*=================================================== REFLECT ===================================================*/
 
-/*=================================================== DISCUSS (JS)? ===================================================*/
+/*=================================================== DISCUSS ===================================================*/
 .form-container {
-    background-color: white;
+    background-color: #F6FBFC;
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-bottom: 5rem;
 }
 label {
     display: block;
@@ -233,7 +234,7 @@ button {
     width: 100%;
     padding: 12px;
     margin-top: 20px;
-    background-color: #4caf50;
+    background-color: #305f6f;
     color: white;
     border: none;
     border-radius: 4px;
@@ -241,7 +242,7 @@ button {
     cursor: pointer;
 }
 button:hover {
-    background-color: #45a049;
+    background-color: #406f7f;
 }
 /*=================================================== SOURCES ===================================================*/
 
