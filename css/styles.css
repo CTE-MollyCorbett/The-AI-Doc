@@ -154,7 +154,7 @@ main h2 {
     gap: 3rem;
 }
 .expert-photo {
-    min-width: 20%;
+    min-width: clamp(2rem, 20%, 10rem);
     height: 100%;
     max-height: 400px;
     object-fit: cover;
@@ -288,3 +288,13 @@ button:hover {
     color: gold;
 }
 /*=================================================== MEDIA QUERY ===================================================*/
+@media screen and (max-width: 768px){
+    .expert-photo {
+        height: 50%;
+    }
+}
+@media screen and (max-width: 480px) {
+    .expert-photo {
+        height: 25%;
+    }
+}
