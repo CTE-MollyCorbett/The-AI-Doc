@@ -1,11 +1,11 @@
 /*=================================================== VARIABLES ===================================================*/
 :root {
-    --ink: #17324A; /* header, footer, headings */
-    --ink-soft: #4A6075; /* softer text */
+    --ink: #194a17; /* header, footer, headings */
+    --ink-soft: #50754a; /* softer text */
     --paper: #F5F8FA; /* page background */
     --line: #D3DDD5; /* borders */
-    --river: #1F7A8C; /* main accent: links, buttons */
-    --hudson: #165F6D;
+    --river: #1f8c3c; /* main accent: links, buttons */
+    --hudson: #166d1d;
     --gold: #F2B134; /* highlight accent */
 
     --head: "Space Grotesk", "Segoe UI", Arial, sans-serif; /* header text */
@@ -81,6 +81,7 @@ main h2 {
     font-weight: 700;
     background-color: var(--gold);
     color: var(--ink);
+    font-size: clamp(0.8rem, 1.3vw, 2rem);
     width: 42px;
     height: 42px;
     border-radius: 10px;
@@ -90,7 +91,7 @@ main h2 {
 }
 .logo-name {
     font-family: var(--head);
-    font-size: 1.25rem;
+    font-size: clamp(0.8rem, 1.5vw, 2rem);
     font-weight: 500;
 }
 .main-nav ul {
@@ -107,6 +108,7 @@ main h2 {
 }
 .main-nav a:hover {
     background-color: rgba(255, 255, 255, 0.12);
+    color: var(--gold);
 }
 /*=================================================== INTRODUCTION ===================================================*/
 .intro {
@@ -153,29 +155,25 @@ main h2 {
 }
 .expert-photo {
     min-width: 20%;
+    height: 100%;
     max-height: 400px;
     object-fit: cover;
     overflow: hidden;
     display: flex;
     border-radius: 10px;
 }
-.expert-photo .img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
 figure {
     min-width: 20%;
 }
 figcaption {
-    font-size: clamp(0.6rem, 0.75vw, 1rem);
+    font-size: clamp(0.6rem, 0.9vw, 1rem);
 }
 .expert-header {
-    font-size: 3rem;
+    font-size: clamp(1rem, 3.5vw, 4rem);
     margin-bottom: 0.2rem;
 }
 .role {
-    font-size: 0.9rem;
+    font-size: clamp(0.8rem, 1.75vw, 2.2rem);
     font-style: italic;
     margin-bottom: 0.75rem;
 }
@@ -186,7 +184,7 @@ figcaption {
     color: rgb(29, 43, 29);
 }
 .quote {
-    color: gray;
+    color: rgb(205, 9, 9);
 }
 .award {
     padding-left: 2.5rem;
@@ -204,11 +202,14 @@ table, th, td {
     border-width: 10px, 10px, 10px, 10px;
     width: 90vw;
 }
+th {
+    font-size: clamp(1rem, 1.25vw, 2rem);
+}
 thead {
     background-color: lightblue;
 }
 tbody {
-    background-color: var(--paper);
+    background-color: rgb(255, 255, 222);
 }
 td {
     padding-left: 0.5rem;
